@@ -11,4 +11,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/home.html',
             controller: 'HomeController'
         });
+    $stateProvider
+    	.state('register', {
+    		url: '/register',
+    		templateUrl: '/views/register.html',
+    		controller: 'HomeController'
+    	});
 }])

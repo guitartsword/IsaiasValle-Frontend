@@ -1,4 +1,4 @@
-angular.module('AngularScaffold.Services').factory('HomeService', ['$http',
+angular.module('AngularScaffold.Services').factory('RegisterController', ['$http',
 	function($http){
 		$http.defaults.withCredentials = true;
 		var baseUrl = 'http://localhost:8000/';

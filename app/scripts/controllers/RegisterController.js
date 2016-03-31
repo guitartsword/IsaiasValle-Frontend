@@ -1,9 +1,6 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('HomeController', ['$location','$scope', 'HomeService', '$sessionStorage', function ($location,$scope, HomeService, $sessionStorage) {
-    	$scope.title = "Tabla de estudiantes de programamción 4."
-      $scope.exampleObject = {text: "Hola, Mundo"}
-      $scope.students = [];
-      $scope.student = {};
+  .controller('RegisterController', ['$location','$scope', 'HomeService', '$sessionStorage', function ($location,$scope, HomeService, $sessionStorage) {
+      $scope.user = {};
 
       $scope.getStudents = function(){
         HomeService.GetStudents().then(function(response){

@@ -1,5 +1,5 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('NavbarController', ['AuthService', '$scope', '$rootScope', '$sessionStorage',  function (authService, $scope, $rootScope, $sessionStorage) {
+  .controller('NavbarController', ['AuthService', '$scope', '$rootScope', '$sessionStorage', '$location',  function (authService, $scope, $rootScope, $sessionStorage, $location) {
       $scope.user = {};
       $scope.$sessionStorage = $sessionStorage;
 
@@ -20,7 +20,11 @@ angular.module('AngularScaffold.Controllers')
           alert(err.data.error + " " + err.data.message);
         });
       }
-
+      $scope.register = function(){
+        console.log("register");
+        $location.path('/register');
+      }
+      /*
       $scope.register = function(){
         var user = {username: $scope.user.username, password:  $scope.user.password, scope: ['admin']};
         authService.Register(user).then(function(response){
@@ -31,4 +35,5 @@ angular.module('AngularScaffold.Controllers')
           alert(err.data.error + " " + err.data.message);
         })
       }
+      */
   }]);
